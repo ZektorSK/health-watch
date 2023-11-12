@@ -1,5 +1,19 @@
+/*
+| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   Imports                                                       |
+| _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+*/
 const express = require('express');
 const router = express.Router();
+
+/*
+| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   Api Controllers                                               |
+|   - - - - - -                                                   |
+|   Import controllers here                                       |
+| _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+*/
+const PingController = require('../controllers/ping');
 
 /*
 | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
@@ -10,11 +24,16 @@ const router = express.Router();
 */
 
 router.get('/', (req, res) => {
-    res.json({message: "Welcome to `Health Checker`"});
+    res.json({message: 'Welcome to `Health Checker`'});
 });
 
-router.post('/ping', (req, res) => {
-   res.json({message: req.body})
+router.post('/ping', async (req, res) => {
+    return PingController.ping(req, res);
 });
 
+/*
+| - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   Exports                                                       |
+| _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+*/
 module.exports = router;
