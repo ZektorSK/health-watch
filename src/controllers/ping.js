@@ -35,5 +35,3 @@ async function ping(req, res) {
 module.exports = {
     ping: ping
 }
-
-//test
