@@ -3,6 +3,7 @@
 node_modules
 .env
 package-lock.json
+/src/database/migrations
 
 .http
 http-client.private.env.json
