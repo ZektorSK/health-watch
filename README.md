@@ -2,6 +2,15 @@
 
 # Setup
 
+## Running the app locally
+
+```bash
+#run in project terminal
+$ npm install
+$ npx prisma migrate dev
+$ npm run start
+```
+
 ## Running the app on docker
 
 Use --build if you need to rebuild the images after changes to docker files or if you are launching it for the first time, otherwise just omit it
@@ -37,3 +46,7 @@ Update your database with latest changes using migrations with
 #run in project terminal
 $ npx prisma migrate dev
 ```
+
+# Testing
+
+Todo...
