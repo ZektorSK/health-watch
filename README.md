@@ -36,6 +36,13 @@ Create a database using available postgresql tools and then run
 $ npx prisma migrate dev
 ```
 
+## Seeding database
+
+```bash
+#run in project terminal
+$ npm run seed
+```
+
 # Migrations
 
 ## Running migrations
